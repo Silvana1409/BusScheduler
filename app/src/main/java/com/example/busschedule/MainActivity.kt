@@ -1,3 +1,5 @@
+//Auteur Silvana ESQUIVEL
+//Création 01.03.2023
 /*
  * Copyright (C) 2021 The Android Open Source Project
  *
@@ -13,6 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.example.busschedule
 
 import androidx.appcompat.app.AppCompatActivity

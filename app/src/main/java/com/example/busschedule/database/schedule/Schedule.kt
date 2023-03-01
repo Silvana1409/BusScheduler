@@ -1,3 +1,5 @@
+//Auteur Silvana ESQUIVEL
+//Création 01.03.2023
 package com.example.busschedule.database.schedule
 
 import androidx.annotation.NonNull
