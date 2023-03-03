@@ -81,8 +81,14 @@ class StopScheduleFragment: Fragment() {
         val busStopAdapter = BusStopAdapter({})
         recyclerView.adapter = busStopAdapter
 
-        GlobalScope.launch { (Dispatchers.IO)
-        busStopAdapter.submitList(viewModel.scheduleForStopName(stopName))}
+//        GlobalScope.launch { (Dispatchers.IO)
+//        busStopAdapter.submitList(viewModel.scheduleForStopName(stopName))}
+        //avec flow:
+        lifecycle.coroutineScope.launch {
+            viewModel.fullSchedule().collect() {
+                busStopAdapter.submitList(it)
+            }
+        }
 
         }
 
